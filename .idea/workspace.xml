@@ -1,81 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8eff9929-ce43-4a09-946e-a9461840620c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/account/authentication.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/migrations/0002_contact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/static/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/account/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/account/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/account/register_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/account/user/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/account/user/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/actions/action/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/logged_out.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/password_change_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/password_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/account/templates/registration/password_reset_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/actions/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/migrations/0002_image_total_likes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/signals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/static/css/bookmarklet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/static/js/bookmarklet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/templates/bookmarklet_launcher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/templates/images/image/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/templates/images/image/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/templates/images/image/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/templates/images/image/list_ajax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/templates/images/image/ranking.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/cache/1f/0a/1f0a361b64a00a7b946d7744eb3129b7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/cache/3c/73/3c73918d2e9dcd2012a24b726bb86ff1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/cache/60/cb/60cb3ca61afd0b92e585f1ca7a461470.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/cache/7b/a8/7ba888368999c218e5f1dd9d6438b791.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/2019/08/24/rose.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/2019/08/26/orange-fruit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/2019/08/26/wild-tiger.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0002_remove_profile_role.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/migrations/0003_profile_gender.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/account/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/account/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/account/logout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/account/registration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/account/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageSahring/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageSahring/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageSahring/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/imageSahring/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="8eff9929-ce43-4a09-946e-a9461840620c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,5 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Full update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full update" />
   </component>
 </project>
