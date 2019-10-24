@@ -1,20 +1,13 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends "base.html" %}
 
-<div class="card h-auto p-4" style="width: 32%">
-    <h3> Log-in </h3>
-        <hr class="mt-2 mb-5">
-        <form action="{% url 'login' %}" method="POST">
-            {{ username.error }}
-            <input type="text" name="username" class="form-control mb-4" placeholder="Username">
-            {{ password.error }}
-            <input type="password" name="password" class="form-control mb-4" placeholder="password">
-            <div class="d-flex mb-4">
-                <input type="checkbox" class="mr-2"> Remember me
-                <a href="#" class="ml-auto"> Forgot password?</a>
-            </div>
-            {% csrf_token %}
-            <input type="submit" class="btn btn-black btn-block " value="Login">
-        </form>
-    </div>
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+  <h1>Log-in</h1>
+  <p>Please, use the following form to log-in:</p>
+  <form action="." method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Log in"></p>
+  </form>
 {% endblock %}

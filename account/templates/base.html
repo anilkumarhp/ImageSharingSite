@@ -1,65 +1,69 @@
-<!doctype html>
-{% load static %}
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
-    <!-- Reset css  -->
-    <link href="{% static 'styles/reset.css' %}" rel="stylesheet">
-    <!-- base css -->
-    <link href="{% static 'styles/style.css' %}" rel="stylesheet">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-  <div class="container-fluid w-100 h-100">
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" style="letter-spacing: .8px">
-    <a class="navbar-brand" href="#"><h3>Image Sharing</h3></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse w-100 navbar-collapse" id="navbarsExampleDefault">
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <span class="logo">Bookmarks</span>
     {% if request.user.is_authenticated %}
-
-      <nav class="nav w-100">
-        <a class="nav-link text-white {% if section == 'dashboard' %} active {% endif %}"  href="{% url 'dashboard' %}">My dashboard</a>
-        <a href="#" class=" nav-link text-white {% if section == 'images' %}active{% endif %}">Images</a>
-        <a href="#" class="nav-link text-white {% if section == 'people' %}selected{% endif %}">People</a>
+      <ul class="menu">
+        <li {% if section == "dashboard" %}class="selected"{% endif %}>
+          <a href="{% url "dashboard" %}">My dashboard</a>
+        </li>
+        <li {% if section == "images" %}class="selected"{% endif %}>
+          <a href="{% url "images:list" %}">Images</a>
+        </li>
+        <li {% if section == "people" %}class="selected"{% endif %}>
+          <a href="{% url "user_list" %}">People</a>
+        </li>
+      </ul>
     {% endif %}
-     <form class="form-inline ml-auto my-2 my-lg-0">
-        <span class="user text-white">
-          {% if request.user.is_authenticated %}
-          Hello {{ request.user.first_name }},
-          <a class="text-white" href="{% url 'logout' %}">Logout</a>
-          {% else %}
-          <a class="text-white" href="{% url 'login' %}">Log-in</a>
-          {% endif %}
-        </span>
-     </form>
-    </div>
-  </nav>
-    <div class="container-fluid d-flex justify-content-center  align-items-center min-height">
-      {% block content %}
-      {% endblock %}
-    </div>
+
+    <span class="user">
+      {% if request.user.is_authenticated %}
+        Hello {{ request.user.first_name }},
+        <a href="{% url "logout" %}">Logout</a>
+      {% else %}
+        <a href="{% url "login" %}">Log-in</a>
+      {% endif %}
+    </span>
   </div>
-    <!-- Optional JavaScript -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
-  </body>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">
+          {{ message|safe }}
+            <a href="#" class="close">x</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script>
+    var csrftoken = Cookies.get('csrftoken');
+    function csrfSafeMethod(method) {
+      // these HTTP methods do not require CSRF protection
+      return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+      beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+          xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+      }
+    });
+    $(document).ready(function(){
+      {% block domready %}
+      {% endblock %}
+       });
+  </script>
+</body>
 </html>
